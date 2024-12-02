@@ -6,6 +6,11 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
+app.get("/", (req, res) => {
+    res.send("Todo App Backend is Running!");
+});
+
+
 let todos = []; // Store todos
 
 // Fetch all todos
